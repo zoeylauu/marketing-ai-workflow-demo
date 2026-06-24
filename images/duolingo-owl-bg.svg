@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract owl watermark</title>
+  <desc id="desc">A soft abstract owl illustration for a portfolio case study background.</desc>
+  <defs>
+    <linearGradient id="owlBody" x1="172" y1="104" x2="728" y2="795" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7ddf89"/>
+      <stop offset="0.52" stop-color="#b6e9ce"/>
+      <stop offset="1" stop-color="#8dbbff"/>
+    </linearGradient>
+    <linearGradient id="owlLine" x1="204" y1="137" x2="696" y2="762" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1d9b63"/>
+      <stop offset="1" stop-color="#2457e6"/>
+    </linearGradient>
+  </defs>
+  <path
+    d="M450 87c-59 0-113 18-158 49l-77-42 23 104c-44 56-70 131-70 218 0 217 126 391 282 391s282-174 282-391c0-87-26-162-70-218l23-104-77 42c-45-31-99-49-158-49Z"
+    fill="url(#owlBody)"/>
+  <path
+    d="M260 418c-18 139 62 267 190 313 128-46 208-174 190-313"
+    fill="none"
+    stroke="url(#owlLine)"
+    stroke-width="34"
+    stroke-linecap="round"
+    opacity=".36"/>
+  <circle cx="350" cy="346" r="98" fill="#f8fbff" opacity=".9"/>
+  <circle cx="550" cy="346" r="98" fill="#f8fbff" opacity=".9"/>
+  <circle cx="350" cy="346" r="33" fill="#2457e6" opacity=".72"/>
+  <circle cx="550" cy="346" r="33" fill="#2457e6" opacity=".72"/>
+  <path d="M450 425 397 517h106l-53-92Z" fill="#2bbd73" opacity=".62"/>
+  <path
+    d="M284 536c42 48 97 74 166 74s124-26 166-74"
+    fill="none"
+    stroke="#2457e6"
+    stroke-width="28"
+    stroke-linecap="round"
+    opacity=".26"/>
+  <path
+    d="M344 766c28 30 64 47 106 47s78-17 106-47"
+    fill="none"
+    stroke="#1d9b63"
+    stroke-width="24"
+    stroke-linecap="round"
+    opacity=".3"/>
+</svg>

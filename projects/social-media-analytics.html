@@ -28,7 +28,7 @@
   </header>
 
   <main>
-    <section class="case-hero section" aria-labelledby="case-title">
+    <section class="case-hero duolingo-case-hero section" aria-labelledby="case-title">
       <div class="container case-hero-grid">
         <div>
           <p class="eyebrow">Independent Case Study</p>
@@ -44,7 +44,7 @@
           </p>
           <div class="hero-actions">
             <a class="button primary" href="../index.html#projects">Back to Portfolio</a>
-            <a class="button secondary" href="#pillars">View Framework</a>
+            <a class="button secondary" href="#analytics">View Analytics</a>
           </div>
         </div>
         <aside class="case-summary" aria-label="Project summary">
@@ -63,7 +63,7 @@
             </div>
             <div>
               <dt>Output</dt>
-              <dd>Content pillar framework, observations, and recommendations</dd>
+              <dd>Public metadata analysis, visual insights, and recommendations</dd>
             </div>
           </dl>
         </aside>
@@ -104,29 +104,11 @@
 
         <article class="case-block">
           <p class="eyebrow">Research Method</p>
-          <h2>A manual review framework for public short-form content and visible engagement signals.</h2>
+          <h2>A public metadata workflow for short-form content and visible engagement signals.</h2>
           <p>
-            The project is designed around manually reviewing 20-30 public Duolingo social media posts
-            from TikTok, Instagram, and YouTube Shorts. The analysis focuses only on publicly visible
-            content and engagement signals, such as content format, caption style, comment interaction,
-            visible likes, visible comments, visible shares, and visible view counts when available.
-          </p>
-          <p>
-            Each post would be categorized by content pillar, creative format, hook style, tone, use of
-            mascot storytelling, trend participation, product connection, and likely engagement driver.
-            The method is qualitative and intended for digital marketing learning, not for internal
-            performance reporting.
-          </p>
-        </article>
-
-        <article class="case-block">
-          <p class="eyebrow">Public Metadata Collection Workflow</p>
-          <h2>A semi-automated workflow collects publicly visible YouTube metadata for analysis.</h2>
-          <p>
-            This project uses yt-dlp to collect publicly visible YouTube metadata for portfolio
-            analysis. The script does not download videos. It extracts metadata from Duolingo's public
-            YouTube presence or selected Shorts URLs, filters for videos that appear to be short-form,
-            and saves a structured CSV for review.
+            The project combines manual content review with a semi-automated yt-dlp workflow. The script
+            extracts publicly visible metadata from Duolingo's YouTube presence, filters for videos that
+            appear to be Shorts or short-form videos, and saves a structured CSV for portfolio analysis.
           </p>
           <p>
             This project uses yt-dlp to collect publicly visible YouTube metadata for portfolio
@@ -137,302 +119,190 @@
             <a class="button secondary" href="../data/duolingo_youtube_shorts.csv">View data/duolingo_youtube_shorts.csv</a>
           </div>
         </article>
+      </div>
+    </section>
 
-        <article class="case-block">
-          <p class="eyebrow">Metrics Used</p>
-          <h2>Public engagement metrics provide directional signals, not private performance outcomes.</h2>
-          <div class="metric-grid">
-            <div>
-              <span>Views</span>
-              <p>View count shows how many times a public video has been viewed on YouTube.</p>
-            </div>
-            <div>
-              <span>Likes</span>
-              <p>Like count is a visible signal of positive audience response.</p>
-            </div>
-            <div>
-              <span>Comments</span>
-              <p>Comment count is a visible signal of discussion, participation, or reaction.</p>
-            </div>
-            <div>
-              <span>Proxy</span>
-              <p>Engagement proxy = (likes + comments) / views. If views are missing or zero, it is left blank.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="case-block">
+    <section class="section section-muted" id="analytics" aria-labelledby="dataset-title">
+      <div class="container">
+        <div class="section-heading">
           <p class="eyebrow">Dataset Summary</p>
-          <h2>The collected CSV gives a directional view of recent public short-form performance.</h2>
-          <p>
-            The current dataset includes 30 public YouTube Shorts or short-form video records collected
-            from Duolingo's public YouTube presence. These metrics should be read as public engagement
-            signals, not as evidence of private business performance.
-          </p>
-          <div class="metric-grid">
-            <div>
-              <span>Videos</span>
-              <p>30 videos analyzed</p>
-            </div>
-            <div>
-              <span>Total Views</span>
-              <p>9,181,472 public views</p>
-            </div>
-            <div>
-              <span>Avg. Views</span>
-              <p>306,049 views per video</p>
-            </div>
-            <div>
-              <span>Avg. Engagement</span>
-              <p>2.98% average engagement proxy</p>
-            </div>
+          <h2 id="dataset-title">A directional view of recent public short-form performance.</h2>
+        </div>
+        <div class="analytics-kpi-grid" aria-label="Dataset summary metrics">
+          <div class="kpi-card">
+            <span>Videos Analyzed</span>
+            <strong>30</strong>
+            <p>Public Shorts or short-form videos</p>
           </div>
-          <div class="metric-grid">
-            <div>
-              <span>Avg. Likes</span>
-              <p>8,845 likes per video</p>
-            </div>
-            <div>
-              <span>Avg. Comments</span>
-              <p>716 comments per video</p>
-            </div>
-            <div>
-              <span>Highest Views</span>
-              <p>993,439 views for the top video</p>
-            </div>
-            <div>
-              <span>Source</span>
-              <p>Public YouTube metadata exported to CSV</p>
-            </div>
+          <div class="kpi-card">
+            <span>Total Public Views</span>
+            <strong>9.18M</strong>
+            <p>Combined visible view count</p>
           </div>
+          <div class="kpi-card">
+            <span>Average Views</span>
+            <strong>306K</strong>
+            <p>Average per video</p>
+          </div>
+          <div class="kpi-card">
+            <span>Average Likes</span>
+            <strong>8,845</strong>
+            <p>Visible likes per video</p>
+          </div>
+          <div class="kpi-card">
+            <span>Average Comments</span>
+            <strong>716</strong>
+            <p>Visible comments per video</p>
+          </div>
+          <div class="kpi-card">
+            <span>Avg. Engagement Proxy</span>
+            <strong>2.98%</strong>
+            <p>(likes + comments) / views</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="charts-title">
+      <div class="container analytics-chart-grid">
+        <article class="case-block chart-card chart-card-wide">
+          <p class="eyebrow">Top 5 Videos by View Count</p>
+          <h2 id="charts-title">High-view posts show the reach potential of entertainment-led short-form content.</h2>
+          <div class="chart-canvas-wrap tall-chart">
+            <canvas id="topVideosChart" aria-label="Horizontal bar chart showing top five Duolingo videos by public view count"></canvas>
+          </div>
+          <p class="chart-note">View counts are public YouTube metadata and should be interpreted as visibility signals, not sales or conversion outcomes.</p>
         </article>
 
-        <article class="case-block">
-          <p class="eyebrow">Top Performing Videos</p>
-          <h2>The top five videos by public view count show a mix of entertainment, product reminders, and cultural references.</h2>
-          <div class="table-wrap">
-            <table class="analysis-table">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>View Count</th>
-                  <th>Like Count</th>
-                  <th>Comment Count</th>
-                  <th>Engagement Proxy</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>dress to impress</td>
-                  <td>993,439</td>
-                  <td>38,207</td>
-                  <td>2,400</td>
-                  <td>4.09%</td>
-                </tr>
-                <tr>
-                  <td>my screen time is 50% lessons and 50% fishing</td>
-                  <td>662,354</td>
-                  <td>20,770</td>
-                  <td>1,500</td>
-                  <td>3.36%</td>
-                </tr>
-                <tr>
-                  <td>Golden Tempo, this one's for you #kentuckyderby #racing</td>
-                  <td>602,169</td>
-                  <td>14,308</td>
-                  <td>998</td>
-                  <td>2.54%</td>
-                </tr>
-                <tr>
-                  <td>congrats it's a streak! (now go to the app and do it for real)</td>
-                  <td>517,920</td>
-                  <td>32,793</td>
-                  <td>1,200</td>
-                  <td>6.56%</td>
-                </tr>
-                <tr>
-                  <td>rekindled an old flame to teach you korean #owlastor #hazbinhotel</td>
-                  <td>478,997</td>
-                  <td>10,949</td>
-                  <td>1,200</td>
-                  <td>2.54%</td>
-                </tr>
-              </tbody>
-            </table>
+        <article class="case-block chart-card">
+          <p class="eyebrow">Average Engagement Proxy by Content Pillar</p>
+          <h2>Language learning reminders appear strong among multi-video categories.</h2>
+          <div class="chart-canvas-wrap">
+            <canvas id="pillarEngagementChart" aria-label="Bar chart showing average engagement proxy by content pillar"></canvas>
           </div>
+          <p class="chart-note">Community Interaction has one video, so that result is a directional signal rather than a general conclusion.</p>
         </article>
 
-        <article class="case-block">
-          <p class="eyebrow">Content Pillar Performance</p>
-          <h2>Language learning reminders show strong public engagement signals in this dataset.</h2>
-          <p>
-            The most frequent rule-based category is Other, appearing in 14 of 30 videos. This suggests
-            that a meaningful share of Duolingo's public short-form content uses entertainment,
-            collaboration, or cultural-reference formats that are broader than the initial content pillar
-            labels. Among named strategic pillars with multiple videos, Language Learning Reminder
-            Content shows the strongest average engagement proxy at 4.01%.
-          </p>
-          <div class="table-wrap">
-            <table class="analysis-table">
-              <thead>
-                <tr>
-                  <th>Content Pillar</th>
-                  <th>Videos</th>
-                  <th>Average Engagement Proxy</th>
-                  <th>Average Views</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Other</td>
-                  <td>14</td>
-                  <td>2.77%</td>
-                  <td>340,075</td>
-                </tr>
-                <tr>
-                  <td>Mascot Personality Content</td>
-                  <td>7</td>
-                  <td>2.64%</td>
-                  <td>252,060</td>
-                </tr>
-                <tr>
-                  <td>Language Learning Reminder Content</td>
-                  <td>5</td>
-                  <td>4.01%</td>
-                  <td>351,408</td>
-                </tr>
-                <tr>
-                  <td>Product Feature / App Usage Content</td>
-                  <td>3</td>
-                  <td>2.63%</td>
-                  <td>254,997</td>
-                </tr>
-                <tr>
-                  <td>Community Interaction Content</td>
-                  <td>1</td>
-                  <td>4.26%</td>
-                  <td>133,961</td>
-                </tr>
-              </tbody>
-            </table>
+        <article class="case-block chart-card">
+          <p class="eyebrow">Average Engagement Proxy by Hook Type</p>
+          <h2>Product Reminder hooks show the strongest public engagement proxy in this dataset.</h2>
+          <div class="chart-canvas-wrap">
+            <canvas id="hookEngagementChart" aria-label="Bar chart showing average engagement proxy by hook type"></canvas>
           </div>
-          <p>
-            Community Interaction Content has the highest average engagement proxy, but it appears only
-            once, so it should be treated as a promising signal rather than a general conclusion.
-          </p>
+          <p class="chart-note">The chart compares visible engagement signals only: likes and comments relative to views.</p>
         </article>
 
-        <article class="case-block">
-          <p class="eyebrow">Hook Type Performance</p>
-          <h2>Product Reminder hooks appear to drive stronger public engagement signals in this dataset.</h2>
-          <p>
-            Product Reminder hooks have the highest average engagement proxy at 4.17% and the highest
-            average view count among the rule-based hook groups. This suggests that Duolingo's
-            short-form videos may perform especially well when humor or entertainment is connected to
-            app usage, lessons, streaks, or learning behavior.
-          </p>
-          <div class="table-wrap">
-            <table class="analysis-table">
-              <thead>
-                <tr>
-                  <th>Hook Type</th>
-                  <th>Videos</th>
-                  <th>Average Engagement Proxy</th>
-                  <th>Average Views</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Other</td>
-                  <td>15</td>
-                  <td>2.76%</td>
-                  <td>326,215</td>
-                </tr>
-                <tr>
-                  <td>Character-driven</td>
-                  <td>7</td>
-                  <td>2.64%</td>
-                  <td>252,060</td>
-                </tr>
-                <tr>
-                  <td>Product Reminder</td>
-                  <td>5</td>
-                  <td>4.17%</td>
-                  <td>384,136</td>
-                </tr>
-                <tr>
-                  <td>Educational</td>
-                  <td>3</td>
-                  <td>2.92%</td>
-                  <td>201,043</td>
-                </tr>
-              </tbody>
-            </table>
+        <article class="case-block chart-card chart-card-wide">
+          <p class="eyebrow">Views by Publish Date</p>
+          <h2>Publish-date view patterns provide context for the sample, not a growth claim.</h2>
+          <div class="chart-canvas-wrap">
+            <canvas id="viewsByDateChart" aria-label="Line chart showing public views by publish date"></canvas>
           </div>
+          <p class="chart-note">This supporting visualization shows variation across the collected posts; it does not imply channel growth, sales impact, or internal performance.</p>
         </article>
       </div>
     </section>
 
-    <section class="section section-muted" id="pillars" aria-labelledby="pillars-title">
-      <div class="container case-content">
-        <article class="case-block">
+    <section class="section section-muted" aria-labelledby="insights-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Marketing Insights</p>
+          <h2 id="insights-title">Public engagement signals suggest that product-linked entertainment deserves attention.</h2>
+        </div>
+        <div class="insight-grid">
+          <article class="insight-card">
+            <span class="insight-number">01</span>
+            <h3>Reach is not the same as engagement.</h3>
+            <p>High views do not always mean the strongest interaction.</p>
+            <div class="insight-stats" aria-label="Reach and engagement stats">
+              <div class="stat-chip">
+                <span class="stat-label">Highest Views</span>
+                <span class="stat-value count-up" data-target="993" data-suffix="K" data-decimals="0">993K</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-label">Top Engagement Proxy</span>
+                <span class="stat-value count-up" data-target="6.56" data-suffix="%" data-decimals="2">6.56%</span>
+              </div>
+            </div>
+          </article>
+          <article class="insight-card">
+            <span class="insight-number">02</span>
+            <h3>Product reminders can work.</h3>
+            <p>Usage-focused hooks showed strong public engagement signals.</p>
+            <div class="insight-stats" aria-label="Product reminder engagement stat">
+              <div class="stat-chip stat-chip-wide">
+                <span class="stat-label">Product Reminder Avg. Engagement</span>
+                <span class="stat-value count-up" data-target="4.17" data-suffix="%" data-decimals="2">4.17%</span>
+              </div>
+            </div>
+          </article>
+          <article class="insight-card">
+            <span class="insight-number">03</span>
+            <h3>Learning behavior stays strong.</h3>
+            <p>Reminder-style content remained one of the strongest repeat themes.</p>
+            <div class="insight-stats" aria-label="Language learning reminder stats">
+              <div class="stat-chip">
+                <span class="stat-label">Avg. Engagement</span>
+                <span class="stat-value count-up" data-target="4.01" data-suffix="%" data-decimals="2">4.01%</span>
+              </div>
+              <div class="stat-chip">
+                <span class="stat-label">Sample Size</span>
+                <span class="stat-value count-up" data-target="5" data-suffix=" videos" data-decimals="0">5 videos</span>
+              </div>
+            </div>
+          </article>
+          <article class="insight-card">
+            <span class="insight-number">04</span>
+            <h3>The coding system needs refinement.</h3>
+            <p>The large "Other" category suggests future labels should be more specific.</p>
+            <div class="insight-stats" aria-label="Coding category stat">
+              <div class="stat-chip stat-chip-wide">
+                <span class="stat-label">Largest Catch-All Group</span>
+                <span class="stat-value">Other</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pillars" aria-labelledby="pillars-title">
+      <div class="container">
+        <div class="section-heading">
           <p class="eyebrow">Content Pillar Framework</p>
           <h2 id="pillars-title">Five content pillars for organizing Duolingo's short-form video strategy.</h2>
-          <div class="table-wrap">
-            <table class="analysis-table">
-              <thead>
-                <tr>
-                  <th>Content Pillar</th>
-                  <th>Content Purpose</th>
-                  <th>Typical Format</th>
-                  <th>Engagement Driver</th>
-                  <th>Marketing Value</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Mascot Personality Content</td>
-                  <td>Make the brand feel memorable and character-driven.</td>
-                  <td>Mascot skits, exaggerated reactions, recurring character moments.</td>
-                  <td>Entertainment, surprise, and recognizable brand behavior.</td>
-                  <td>Strengthens brand recall and gives the audience a reason to follow.</td>
-                </tr>
-                <tr>
-                  <td>Trend-Jacking / Meme Content</td>
-                  <td>Connect the brand to current platform conversations.</td>
-                  <td>Trending sounds, meme formats, timely jokes, remixable moments.</td>
-                  <td>Cultural relevance and quick recognition of familiar formats.</td>
-                  <td>Helps the brand appear native to TikTok, Instagram Reels, and Shorts.</td>
-                </tr>
-                <tr>
-                  <td>Language Learning Reminder Content</td>
-                  <td>Link humor back to the habit of practicing a language.</td>
-                  <td>Study reminders, streak references, motivational jokes.</td>
-                  <td>Relatability and gentle pressure around learning goals.</td>
-                  <td>Keeps product behavior present without relying on a hard sell.</td>
-                </tr>
-                <tr>
-                  <td>Product Feature / App Usage Content</td>
-                  <td>Show how the app fits into a user's learning routine.</td>
-                  <td>Feature callouts, app moments, learning scenarios.</td>
-                  <td>Utility, clarity, and curiosity about the app experience.</td>
-                  <td>Connects brand entertainment to product understanding.</td>
-                </tr>
-                <tr>
-                  <td>Community Interaction Content</td>
-                  <td>Turn audience comments and reactions into content prompts.</td>
-                  <td>Reply videos, comment-driven jokes, audience callbacks.</td>
-                  <td>Participation, recognition, and two-way brand conversation.</td>
-                  <td>Builds community and gives followers a reason to engage again.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </article>
+        </div>
+        <div class="workflow-grid">
+          <article class="workflow-step">
+            <p class="project-number">01</p>
+            <h3>Mascot Personality Content</h3>
+            <p>Uses mascot behavior, character reactions, and recurring personality cues to make the brand recognizable.</p>
+          </article>
+          <article class="workflow-step">
+            <p class="project-number">02</p>
+            <h3>Trend-Jacking / Meme Content</h3>
+            <p>Adapts platform-native jokes, sounds, and cultural references to fit Duolingo's brand voice.</p>
+          </article>
+          <article class="workflow-step">
+            <p class="project-number">03</p>
+            <h3>Language Learning Reminder Content</h3>
+            <p>Connects entertainment to streaks, lessons, practice moments, and learning routines.</p>
+          </article>
+          <article class="workflow-step">
+            <p class="project-number">04</p>
+            <h3>Product Feature / App Usage Content</h3>
+            <p>Links short-form storytelling to app features, learning progress, and product discovery.</p>
+          </article>
+          <article class="workflow-step">
+            <p class="project-number">05</p>
+            <h3>Community Interaction Content</h3>
+            <p>Turns comments, replies, and audience participation into repeatable content prompts.</p>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="video-title">
+    <section class="section section-muted" aria-labelledby="video-title">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Short-Form Video Strategy</p>
@@ -451,80 +321,67 @@
           </article>
           <article class="workflow-step">
             <p class="project-number">03</p>
-            <h3>Trend Adaptation</h3>
-            <p>Adapt platform trends to fit the brand voice instead of forcing traditional advertising into social formats.</p>
-          </article>
-          <article class="workflow-step">
-            <p class="project-number">04</p>
             <h3>Product Connection</h3>
             <p>Use language learning reminders and app usage moments to connect entertainment back to brand relevance.</p>
-          </article>
-          <article class="workflow-step">
-            <p class="project-number">05</p>
-            <h3>Comment Loop</h3>
-            <p>Use audience comments as prompts for future content, creating a visible feedback loop with the community.</p>
-          </article>
-          <article class="workflow-step">
-            <p class="project-number">06</p>
-            <h3>Repeatable Series</h3>
-            <p>Build recurring formats so viewers can recognize the brand quickly and anticipate future posts.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-muted" aria-labelledby="engagement-title">
+    <section class="section section-muted" aria-labelledby="recommendations-title">
       <div class="container case-content">
         <article class="case-block">
-          <p class="eyebrow">Engagement Logic</p>
-          <h2 id="engagement-title">The content invites participation before asking for product consideration.</h2>
-          <p>
-            Duolingo's short-form strategy can be interpreted as an engagement-first model. The content
-            often earns attention through humor, mascot behavior, and trend fluency before reminding
-            viewers of language learning habits or app usage moments.
-          </p>
-          <div class="value-grid">
-            <div>
-              <h3>Recognition</h3>
-              <p>The mascot makes content identifiable even before the viewer reads the caption or account name.</p>
-            </div>
-            <div>
-              <h3>Participation</h3>
-              <p>Comment-driven content can make audiences feel like they are part of the brand conversation.</p>
-            </div>
-            <div>
-              <h3>Memory</h3>
-              <p>Recurring jokes and reminders can make the app category easier to remember in daily routines.</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="case-block">
-          <p class="eyebrow">Marketing Insights</p>
-          <h2>In this public dataset, product-linked entertainment appears especially effective.</h2>
-          <ul class="case-list">
-            <li>The top-viewed video reached 993,439 public views, suggesting that entertainment-led formats can generate broad reach in this sample.</li>
-            <li>The strongest top-five engagement proxy came from a streak-related video at 6.56%, indicating that app habit reminders may create stronger public engagement signals than views alone suggest.</li>
-            <li>Language Learning Reminder Content averaged a 4.01% engagement proxy across five videos, making it the strongest multi-video content pillar in this dataset.</li>
-            <li>Product Reminder hooks averaged a 4.17% engagement proxy and 384,136 average views, suggesting that product-linked hooks may be especially useful when paired with short-form humor.</li>
-            <li>The high number of Other classifications indicates that Duolingo's content often blends cultural references, entertainment, and collaborations in ways that may need a more nuanced coding framework.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="recommendations-title">
-      <div class="container case-content two-column-case">
-        <article class="case-block">
           <p class="eyebrow">Marketing Recommendations</p>
-          <h2 id="recommendations-title">Five recommendations based on the observed public engagement signals.</h2>
-          <ul class="case-list">
-            <li>Balance viral mascot content with clearer product-value messaging. Duolingo should continue using mascot-driven humor and platform-native memes, but more videos can connect the entertainment hook back to app usage moments such as streak building, daily practice, learning progress, and feature discovery.</li>
-            <li>Build recurring content series to improve audience recall. Instead of relying only on one-off viral posts, Duolingo can strengthen repeatable content formats such as "Duo's Streak Reminder," "Duo Reacts to Comments," and "POV: You Forgot Your Lesson." This can make the brand's content system more recognizable and scalable.</li>
-            <li>Connect humor-driven content to behavioral triggers. Humor should not only generate attention; it can also remind users to return to the app. Short-form videos can more clearly link jokes, memes, and mascot behavior to moments such as completing a lesson, recovering a streak, or joining a language challenge.</li>
-            <li>Test different video hooks through A/B testing. Duolingo can compare hook types such as character-driven openings, meme-based openings, user-comment openings, and product-reminder openings to identify which formats generate stronger public engagement signals.</li>
-            <li>Turn community interaction into a structured content source. Audience comments can be used as a repeatable input for future short-form videos, allowing Duolingo to transform public engagement into new content ideas, stronger community participation, and more platform-native storytelling.</li>
-          </ul>
+          <h2 id="recommendations-title">Turn attention into repeatable engagement.</h2>
+          <div class="strategy-flow" data-strategy-flow aria-label="Interactive strategy flow">
+            <button class="strategy-step is-active" type="button" data-step="1" aria-pressed="true" aria-controls="rec-1">
+              <span>01</span>
+              <strong>Viral Attention</strong>
+            </button>
+            <button class="strategy-step" type="button" data-step="2" aria-pressed="false" aria-controls="rec-2">
+              <span>02</span>
+              <strong>Product Connection</strong>
+            </button>
+            <button class="strategy-step" type="button" data-step="3" aria-pressed="false" aria-controls="rec-3">
+              <span>03</span>
+              <strong>Habit Trigger</strong>
+            </button>
+            <button class="strategy-step" type="button" data-step="4" aria-pressed="false" aria-controls="rec-4">
+              <span>04</span>
+              <strong>Testing Loop</strong>
+            </button>
+            <button class="strategy-step" type="button" data-step="5" aria-pressed="false" aria-controls="rec-5">
+              <span>05</span>
+              <strong>Community Expansion</strong>
+            </button>
+          </div>
+          <div class="recommendation-grid">
+            <article class="recommendation-card reveal-on-scroll is-active" id="rec-1" data-step="1">
+              <span class="recommendation-number">01 Viral Attention</span>
+              <h3>Balance Virality with Product Value</h3>
+              <p>Turn mascot-driven humor into clearer reminders of streaks, lessons, and app features.</p>
+            </article>
+            <article class="recommendation-card reveal-on-scroll" id="rec-2" data-step="2">
+              <span class="recommendation-number">02 Product Connection</span>
+              <h3>Connect Humor to App Usage</h3>
+              <p>Make jokes lead back to real product moments, not just entertainment.</p>
+            </article>
+            <article class="recommendation-card reveal-on-scroll" id="rec-3" data-step="3">
+              <span class="recommendation-number">03 Habit Trigger</span>
+              <h3>Build Recurring Content Series</h3>
+              <p>Use recurring formats to strengthen recall and encourage daily learning habits.</p>
+            </article>
+            <article class="recommendation-card reveal-on-scroll" id="rec-4" data-step="4">
+              <span class="recommendation-number">04 Testing Loop</span>
+              <h3>A/B Test Short-Form Hooks</h3>
+              <p>Compare mascot openings, meme hooks, comment replies, and product reminders.</p>
+            </article>
+            <article class="recommendation-card reveal-on-scroll" id="rec-5" data-step="5">
+              <span class="recommendation-number">05 Community Expansion</span>
+              <h3>Use Comments as Content Input</h3>
+              <p>Turn audience comments into reply videos, polls, challenges, and future content ideas.</p>
+            </article>
+          </div>
         </article>
 
         <article class="case-block">
@@ -533,18 +390,19 @@
           <ul class="case-list">
             <li>No access to Duolingo's internal analytics.</li>
             <li>No private ad performance data.</li>
-            <li>No sales or conversion claims.</li>
-            <li>Analysis is based only on publicly visible content.</li>
+            <li>No sales, download, revenue, or conversion claims.</li>
+            <li>Analysis is based only on publicly visible content and public metadata.</li>
           </ul>
         </article>
       </div>
     </section>
 
-    <section class="section section-muted" aria-labelledby="reflection-title">
+    <section class="section" aria-labelledby="reflection-title">
       <div class="container case-content">
         <article class="case-block">
           <p class="eyebrow">Reflection</p>
-          <h2 id="reflection-title">Strong social media analysis connects creative choices to marketing purpose.</h2>
+          <h2 class="sharp-recommendation-headline" id="reflection-title">Turn attention into action.</h2>
+          <p class="sharp-recommendation-support">Use viral content to reinforce product meaning, habit triggers, and community participation.</p>
           <p>
             This project helped me examine short-form video as more than a set of viral posts. A strong
             brand account needs a recognizable voice, repeatable content logic, audience interaction,
@@ -559,6 +417,69 @@
         </article>
       </div>
     </section>
+
+    <section class="section section-muted" aria-labelledby="snapshot-title">
+      <div class="container case-content">
+        <article class="case-block">
+          <p class="eyebrow">Supporting Dataset Snapshot</p>
+          <h2 id="snapshot-title">Top five rows by public view count from the CSV.</h2>
+          <p>
+            This compact table supports the chart analysis above. Engagement proxy values are highlighted
+            when they are comparatively strong within the top-viewed group.
+          </p>
+          <div class="table-wrap">
+            <table class="analysis-table snapshot-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>View Count</th>
+                  <th>Like Count</th>
+                  <th>Comment Count</th>
+                  <th>Engagement Proxy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>dress to impress</td>
+                  <td>993,439</td>
+                  <td>38,207</td>
+                  <td>2,400</td>
+                  <td><span class="engagement-badge strong">4.09%</span></td>
+                </tr>
+                <tr>
+                  <td>screen time: lessons + fishing</td>
+                  <td>662,354</td>
+                  <td>20,770</td>
+                  <td>1,500</td>
+                  <td><span class="engagement-badge medium">3.36%</span></td>
+                </tr>
+                <tr>
+                  <td>Golden Tempo / Kentucky Derby</td>
+                  <td>602,169</td>
+                  <td>14,308</td>
+                  <td>998</td>
+                  <td>2.54%</td>
+                </tr>
+                <tr>
+                  <td>congrats it's a streak</td>
+                  <td>517,920</td>
+                  <td>32,793</td>
+                  <td>1,200</td>
+                  <td><span class="engagement-badge strongest">6.56%</span></td>
+                </tr>
+                <tr>
+                  <td>old flame / teach Korean</td>
+                  <td>478,997</td>
+                  <td>10,949</td>
+                  <td>1,200</td>
+                  <td>2.54%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -568,6 +489,211 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../js/main.js"></script>
+  <script>
+    if (window.Chart) {
+    const chartColors = {
+      blue: "#3b82f6",
+      blueDark: "#1d4ed8",
+      blueSoft: "#dbeafe",
+      teal: "#0f766e",
+      tealSoft: "#5eead4",
+      text: "#172033",
+      muted: "#5d687a",
+      line: "#dce6f3"
+    };
+
+    const chartFont = {
+      family: "Arial, Helvetica, sans-serif"
+    };
+
+    Chart.defaults.font.family = chartFont.family;
+    Chart.defaults.color = chartColors.muted;
+    Chart.defaults.borderColor = chartColors.line;
+
+    const commonChartOptions = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          backgroundColor: "#172033",
+          padding: 12,
+          titleFont: { weight: "700" },
+          bodyFont: { weight: "600" }
+        }
+      }
+    };
+
+    new Chart(document.getElementById("topVideosChart"), {
+      type: "bar",
+      data: {
+        labels: [
+          "dress to impress",
+          "screen time: lessons + fishing",
+          "Golden Tempo / Kentucky Derby",
+          "congrats it's a streak",
+          "old flame / teach Korean"
+        ],
+        datasets: [{
+          label: "Public views",
+          data: [993439, 662354, 602169, 517920, 478997],
+          backgroundColor: [
+            chartColors.blueDark,
+            chartColors.blue,
+            "#6ea8ff",
+            chartColors.teal,
+            "#9cc8ff"
+          ],
+          borderRadius: 8
+        }]
+      },
+      options: {
+        ...commonChartOptions,
+        indexAxis: "y",
+        scales: {
+          x: {
+            beginAtZero: true,
+            ticks: {
+              callback: (value) => `${Math.round(value / 1000)}K`
+            }
+          },
+          y: {
+            ticks: {
+              color: chartColors.text,
+              font: { weight: "700" }
+            }
+          }
+        }
+      }
+    });
+
+    new Chart(document.getElementById("pillarEngagementChart"), {
+      type: "bar",
+      data: {
+        labels: [
+          "Community Interaction",
+          "Language Reminder",
+          "Other",
+          "Mascot Personality",
+          "Product / App Usage"
+        ],
+        datasets: [{
+          label: "Average engagement proxy",
+          data: [4.26, 4.01, 2.77, 2.64, 2.63],
+          backgroundColor: [
+            chartColors.teal,
+            chartColors.tealSoft,
+            "#93c5fd",
+            chartColors.blue,
+            "#bfdbfe"
+          ],
+          borderRadius: 8
+        }]
+      },
+      options: {
+        ...commonChartOptions,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: (value) => `${value}%`
+            }
+          },
+          x: {
+            ticks: {
+              color: chartColors.text,
+              font: { weight: "700" }
+            }
+          }
+        }
+      }
+    });
+
+    new Chart(document.getElementById("hookEngagementChart"), {
+      type: "bar",
+      data: {
+        labels: ["Product Reminder", "Educational", "Other", "Character-driven"],
+        datasets: [{
+          label: "Average engagement proxy",
+          data: [4.17, 2.92, 2.76, 2.64],
+          backgroundColor: [
+            chartColors.teal,
+            chartColors.blue,
+            "#93c5fd",
+            "#bfdbfe"
+          ],
+          borderRadius: 8
+        }]
+      },
+      options: {
+        ...commonChartOptions,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: (value) => `${value}%`
+            }
+          },
+          x: {
+            ticks: {
+              color: chartColors.text,
+              font: { weight: "700" }
+            }
+          }
+        }
+      }
+    });
+
+    new Chart(document.getElementById("viewsByDateChart"), {
+      type: "line",
+      data: {
+        labels: [
+          "Apr 9", "Apr 11", "Apr 15", "Apr 16", "Apr 22", "Apr 24", "Apr 27",
+          "Apr 29", "May 4", "May 5", "May 6", "May 12", "May 15", "May 15",
+          "May 18", "May 21", "May 22", "May 27", "Jun 1", "Jun 1", "Jun 2",
+          "Jun 4", "Jun 8", "Jun 10", "Jun 10", "Jun 12", "Jun 16", "Jun 18",
+          "Jun 18", "Jun 19"
+        ],
+        datasets: [{
+          label: "Public views",
+          data: [
+            478997, 268090, 344828, 269867, 259270, 237023, 205923, 207707,
+            293552, 602169, 662354, 993439, 208669, 389409, 300016, 288087,
+            297328, 326772, 301659, 243508, 517920, 151394, 203983, 232783,
+            180166, 133961, 160886, 177590, 73992, 170130
+          ],
+          borderColor: chartColors.blue,
+          backgroundColor: "rgba(59, 130, 246, 0.12)",
+          pointBackgroundColor: chartColors.blueDark,
+          pointRadius: 3,
+          tension: 0.28,
+          fill: true
+        }]
+      },
+      options: {
+        ...commonChartOptions,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: (value) => `${Math.round(value / 1000)}K`
+            }
+          },
+          x: {
+            ticks: {
+              maxRotation: 0,
+              autoSkip: true,
+              maxTicksLimit: 8
+            }
+          }
+        }
+      }
+    });
+    }
+  </script>
 </body>
 </html>
