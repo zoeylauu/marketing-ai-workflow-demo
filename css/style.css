@@ -339,6 +339,20 @@ h3 {
   z-index: 1;
 }
 
+.case-study-button {
+  display: inline-flex;
+  min-width: 156px;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(59, 130, 246, 0.22);
+}
+
+.case-study-button:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
 .project-number {
   width: fit-content;
   margin-bottom: 22px;
@@ -719,5 +733,9 @@ h3 {
 
   .card-button {
     width: 100%;
+  }
+
+  .case-study-button {
+    min-width: 0;
   }
 }
